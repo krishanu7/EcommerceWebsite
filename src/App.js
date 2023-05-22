@@ -10,7 +10,7 @@ import Error from "./pages/Error";
 import { GlobalStyle } from "./pages/GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import Header from "./components/Header";
-
+import Footer from "./components/Footer";
 const App = () => {
   const theme = {
     colors : {
@@ -20,6 +20,7 @@ const App = () => {
       hover_btn: "#FFE569",
       border: "rgba(98, 84, 243, 0.5)",
       hr: "#ffffff",
+      white: "#F1F6F9",
       helper: "#FEFF86",
       gradient: "linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%)",
       shadow:"rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
@@ -46,6 +47,7 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<Error />} />
         </Routes>
+        <Footer/>
       </Router>
     </ThemeProvider>
   );
