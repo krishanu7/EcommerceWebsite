@@ -12,8 +12,6 @@ export const GlobalStyle = createGlobalStyle`
 
 html {
   font-size: 62.5%;
-  /* scroll-behavior: smooth; */
-  /* 1rem = 10px */
   overflow-x: hidden;
 }
 
@@ -81,9 +79,6 @@ li {
   list-style: none;
 }
 
-
-${"" /* resuable code section  */}
-
 .container {
   max-width: 120rem;
   margin: 0 auto;
@@ -96,7 +91,6 @@ ${"" /* resuable code section  */}
 
 .grid-two-column {
   grid-template-columns: repeat(2, 1fr);
-
 }
 
 .grid-three-column {
@@ -156,15 +150,7 @@ input, textarea{
     font-size: 1.8rem;
     cursor: pointer;
     }
-.grid{
-  gap: 3.2rem;
-}
-      .grid-two-column , .grid-three-column, .grid-four-column{
-          grid-template-columns: 1fr;
-        }
-    }
-`;
-/*
+
 @media (max-width: ${({ theme }) => theme.media.tab}) {
     .container {
     max-width: 130rem;
@@ -176,4 +162,13 @@ input, textarea{
        html {
       font-size: 50%;
     }
-*/
+
+.grid{
+  gap: 3.2rem;
+}
+      .grid-two-column , .grid-three-column, .grid-four-column{
+          grid-template-columns: 1fr;
+        }
+    }
+
+`;
