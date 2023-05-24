@@ -6,13 +6,14 @@ const API = "https:/api.pujakaitem.com/api/products"
 
 const initialState = {
     isLoading : false,
-    isError: false,
-    product: [],
+    isError : false,
+    products : [],
     featureProducts: [],
 }
 
 const AppProvider = ({children}) => {
-    const [state,dispatch] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, initialState);
+
     const getProducts = async (url) => {
         dispatch({type:"SET_LOADING"})
         try {
@@ -26,7 +27,7 @@ const AppProvider = ({children}) => {
     useEffect(() => {
         getProducts(API);
     },[])
-    return <AppContext.Provider value={{...state}} >{children}</AppContext.Provider>
+    return <AppContext.Provider value={{...state}}> {children} </AppContext.Provider>
 };
 const useProductContext = () => {
     return useContext(AppContext);
