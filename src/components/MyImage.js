@@ -8,5 +8,4 @@ const MyImage = () => {
   )
 }
 
-export default MyImage
-MyImage
+export default MyImage;
